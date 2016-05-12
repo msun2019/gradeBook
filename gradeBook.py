@@ -15,7 +15,15 @@ def average_rows(grid, targetRow):
 				answer += item
 			
 			return answer / itemCounter 
-
+def average_all(grid):
+	answer = 0
+	itemCounter = 0.0 
+	for row in grid:
+		for item in row: 
+			itemCounter += 1 
+			answer += item
+	return answer / itemCounter 
+print("The average of all the grades are: {}".format(average_all(grades)))
 print("The average of the grades in the first row are: {}".format(average_rows(grades, 0)))
 print("The average of the grades in the first row are: {}".format(average_rows(grades, 1)))
 print("The average of the grades in the first row are: {}".format(average_rows(grades, 2)))
